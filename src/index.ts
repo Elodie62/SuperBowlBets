@@ -37,8 +37,6 @@ app.post("/login", async (req, res) => {
 });
 
 app.post("/register", async (req, res) => {
-  console.log("registering user", req.body);
-
   await addUser(req.body);
 
   res.json({ success: true, message: "User created successfully" });
